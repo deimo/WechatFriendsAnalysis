@@ -14,7 +14,21 @@
 
 **项目目录结构**
 
-![项目结构](/Users/deimo/Downloads/wechat/proj.jpg)
+![](proj.jpg)
+
+|    目录or文件    |                   作用                   |
+| :--------------: | :--------------------------------------: |
+|     conf目录     |            分词有关的背景图片            |
+|    config.py     |        后去logger.conf的相对位置         |
+|    fonts目录     |               中文字体文件               |
+|     log目录      |       itchat运行时相关日志所在未知       |
+|   logging.conf   |          logger模块相关配置信息          |
+|   **res目录**    | **所有的分析结果最终都会生成在此目录中** |
+|  wechat_area.py  |           分析微信好友地区分步           |
+| wechat_friend.py |          分析微信好友的性别占比          |
+|  wechat_sign.py  |  生成微信好友的个性签名的词云及情感分析  |
+| wechat_photo.py  |           生成维系好友头像拼接           |
+|      run.py      |              上述操作的集合              |
 
 
 
@@ -23,7 +37,7 @@
 1. 增加了依赖安装列表
 2. 修改部分目录代码结构
 3. 修复好友拼图时jpg格式图片不支持RGBA问题
-4. 更优雅地解决Matplotlib绘图库的中文显示问题
+4. 更优雅地解决matplotlib绘图库的中文显示问题
 5. 增加了一个详尽的README…这样大家就都很方便能玩了...
 
 ## 要求
@@ -61,4 +75,18 @@
    python run.py						# 上述操作依次执行
    ```
 
-   
+
+# Q&A
+
+1. Question: mac os下如何解决matplotlib的中文显示问题
+
+   Answer: 在虚拟环境下执行如下脚本：
+
+   ```python
+   In [1]: import matplotlib as mpl
+   In [2]: mpl.matplotlib_fname()
+   Out[2]: '/[your path]/matplotlib/mpl-data/matplotlibrc'
+   ```
+
+   来到matplotlibrc文件所在的上一级目录，然后将项目**fonts目录**下的**STFANGSO.ttf**字体文件copy到**/[your path]/matplotlib/mpl-data/fonts/ttf**目录下即可
+
