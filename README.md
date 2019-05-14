@@ -24,10 +24,10 @@
 |     log目录      |       itchat运行时相关日志所在未知       |
 |   logging.conf   |          logger模块相关配置信息          |
 |   **res目录**    | **所有的分析结果最终都会生成在此目录中** |
-|  wechat_area.py  |           分析微信好友地区分步           |
+|  wechat_area.py  |           分析微信好友地区分布           |
 | wechat_friend.py |          分析微信好友的性别占比          |
 |  wechat_sign.py  |  生成微信好友的个性签名的词云及情感分析  |
-| wechat_photo.py  |           生成维系好友头像拼接           |
+| wechat_photo.py  |           生成微信好友头像拼接           |
 |      run.py      |              上述操作的集合              |
 
 
@@ -69,10 +69,10 @@
 
    ```bash
    python wechat_area.py 	# 生成微信好友地区分析数据
-   python wechat_friend.py # 生成微信好友性别占比数据
-   python wechat_photo.py  # 生成微信好友的头像拼接
-   python wechat_sign.py   # 生成微信好友的个性签名的词云及情感分析
-   python run.py						# 上述操作依次执行
+   python wechat_friend.py  # 生成微信好友性别占比数据
+   python wechat_photo.py   # 生成微信好友的头像拼接
+   python wechat_sign.py    # 生成微信好友的个性签名的词云及情感分析
+   python run.py		    # 上述操作依次执行
    ```
 
 
@@ -88,5 +88,5 @@
    Out[2]: '/[your path]/matplotlib/mpl-data/matplotlibrc'
    ```
 
-   来到matplotlibrc文件所在的上一级目录，然后将项目**fonts目录**下的**STFANGSO.ttf**字体文件copy到**/[your path]/matplotlib/mpl-data/fonts/ttf**目录下即可
+   来到matplotlibrc文件所在的上一级目录，然后将项目**fonts目录**下的**STFANGSO.ttf**字体文件copy到*/[your path]/matplotlib/mpl-data/fonts/ttf*目录下即可
 
