@@ -65,7 +65,13 @@
    pip install -r requirements.txt
    ```
 
-4. 按需生成自己的各种分析数据
+4. 创建分析结果保存目录
+    ```bash
+    # 在run.py同级目录下执行
+    mkdir -p res/photos
+    ```
+
+5. 按需生成自己的各种分析数据
 
    ```bash
    python wechat_area.py 	# 生成微信好友地区分析数据
