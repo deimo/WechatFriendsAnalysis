@@ -1,1 +1,9 @@
 env
+*/__pycache__
+*.pyc
+*.log*
+*.log
+
+WechatFriendsAnalysis/log/itchat_log.log
+WechatFriendsAnalysis/res/*.png
+WechatFriendsAnalysis/res/phots/*.jpg

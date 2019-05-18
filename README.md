@@ -65,13 +65,7 @@
    pip install -r requirements.txt
    ```
 
-4. 创建分析结果保存目录
-    ```bash
-    # 在run.py同级目录下执行
-    mkdir -p res/photos
-    ```
-
-5. 按需生成自己的各种分析数据
+4. 按需生成自己的各种分析数据
 
    ```bash
    python wechat_area.py 	# 生成微信好友地区分析数据
@@ -86,7 +80,8 @@
 
 1. Question: mac os下如何解决matplotlib的中文显示问题
 
-   Answer: 在虚拟环境下执行如下脚本：
+   Answer: 
+   1) 在虚拟环境下执行如下脚本：
 
    ```python
    In [1]: import matplotlib as mpl
@@ -94,5 +89,11 @@
    Out[2]: '/[your path]/matplotlib/mpl-data/matplotlibrc'
    ```
 
-   来到matplotlibrc文件所在的上一级目录，然后将项目**fonts目录**下的**STFANGSO.ttf**字体文件copy到*/[your path]/matplotlib/mpl-data/fonts/ttf*目录下即可
+   2) 来到matplotlibrc文件所在的上一级目录，然后将项目**fonts目录**下的**STFANGSO.ttf**字体文件copy到*/[your path]/matplotlib/mpl-data/fonts/ttf*目录下即可
+   3) 在python shell中执行
+
+   ```python
+   In [1]: from matplotlib.font_manager import _rebuild
+   In [2]: _rebuild()
+   ```
 
